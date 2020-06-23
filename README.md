@@ -1,27 +1,55 @@
-# KalahAngular
+# Kalah Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+This is the Frontend solution for the project https://github.com/xlucasdemelo/Kalah
 
-## Development server
+## Technology Stack:
+* Angular 7
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This application uses npm for dependency management, it is mandatory to install it.
 
-## Build
+```
+npm: https://nodejs.org/en/
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Running with npm
 
-## Running unit tests
+[NOTE] The backend must be running in order to use the application, run it following the steps at https://github.com/xlucasdemelo/Kalah
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1.Clone the project
 
-## Running end-to-end tests
+```
+git clone https://github.com/xlucasdemelo/kalah-angular
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+3.Install packages:
+```
+npm install
+```
 
-## Further help
+3.Start the application:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+ng serve --open
+```
+
+The application will run at http://localhost:4200
+
+### Running With Docker
+
+1.Build Docker image
+
+```
+docker build -t kalah-angular . 
+```
+
+4.Run Docker image changing the DB env variables
+
+```
+docker run -it -d --name kalah-angular -p 4200:80  kalah-angular
+```
+
+The application will run at http://localhost:4200

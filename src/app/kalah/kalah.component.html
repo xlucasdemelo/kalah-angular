@@ -14,16 +14,18 @@
 </div>
 
 <br>
-<div id="gameInfo">
-    Player turn: {{games.nextTurnPlayer.name}}
-    <br>
-    is Game Over: {{games.gameOver}}
+<div *ngIf="games != undefined">
+    <div id="gameInfo">
+        Player turn: {{games.nextTurnPlayer.name}}
+        <br>
+        is Game Over: {{games.gameOver}}
 
-    <br>
-    <div *ngIf="games.gameOver">
-        Winner: {{games.winner}}
+        <br>
+        <div *ngIf="games.gameOver">
+            Winner: {{games.winner}}
+        </div>
+
     </div>
-
 </div>
 
 <br>

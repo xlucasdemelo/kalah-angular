@@ -10,6 +10,7 @@ export class Pit{
   ) {}
 }
 
+
 @Component({
   selector: 'app-kalah',
   templateUrl: './kalah.component.html',
@@ -19,7 +20,7 @@ export class KalahComponent implements OnInit {
 
   constructor(private httpClientService:HttpClientService) { }
 
-  games: Object;
+  games: any;
 
   playerOne:Pit[] = [];
   playerTwo:Pit[] = [];
