@@ -7,3 +7,16 @@
 .square h1 {
     color: #fff;
 }
+
+.endZoneRight{
+    height: 80px;
+    position: absolute;
+    left: 445px;
+    top: 53px
+}
+
+.endZoneLeft{
+    height: 80px;
+    position: absolute;
+    left: 50px;
+}

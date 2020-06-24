@@ -7,6 +7,7 @@ export class Pit{
     public numberOfSeeds:string,
     public index:Number,
     public globalIndex:Number,
+    public endZone:Boolean
   ) {}
 }
 
@@ -46,13 +47,13 @@ export class KalahComponent implements OnInit {
 
       for (let i = 0; i < playerOneArray.length; i++) {
         const currentPit = playerOneArray[i];
-        let pit = new Pit( PLAYER_ONE, currentPit.numberOfSeeds, i, i );
+        let pit = new Pit( PLAYER_ONE, currentPit.numberOfSeeds, i, i, i == playerOneArray.length - 1 );
         this.playerOne.push(pit);
       }
 
       for (let i = 0; i < playerTwoArray.length; i++) {
         const currentPit = playerTwoArray[i];
-        let pit = new Pit( PLAYER_TWO, currentPit.numberOfSeeds, i, i + 7 );
+        let pit = new Pit( PLAYER_TWO, currentPit.numberOfSeeds, i, i + 7, i == playerTwoArray.length -1 );
         this.playerTwo.push(pit);
       }
 

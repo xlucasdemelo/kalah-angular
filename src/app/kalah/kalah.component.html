@@ -1,14 +1,17 @@
 
-<div *ngIf="loaded">
+<div style="margin-left: 100px;" *ngIf="loaded">
     <div class="square" style="display: table-cell" 
         (click)="performMove(pit)"
-        *ngFor="let pit of playerTwo.reverse(); let k = index" >
+        *ngFor="let pit of playerTwo.reverse(); let k = index" 
+        [ngClass]="{'endZoneLeft': pit.endZone === true}">
         {{pit.numberOfSeeds}}
     </div>
     <br>
     <div class="square" style="display: table-cell" 
         (click)="performMove(pit)"
-        *ngFor="let pit of playerOne; let i = index" >
+        *ngFor="let pit of playerOne; let i = index" 
+        [ngClass]="{'endZoneRight': pit.endZone === true}">
+        
         {{pit.numberOfSeeds}}
     </div>
 </div>
